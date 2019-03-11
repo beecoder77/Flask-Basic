@@ -1,0 +1,16 @@
+<html>
+<title>Belajar Flask</title>
+<body>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for messages in messages %}
+                {{ messages }}
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+
+    <hr>
+    <h1>Selamat Datang {{username}} !</h1>
+    <a href="{{ url_for('logout') }}">Logout</a>
+</body>
+</html>

@@ -1,0 +1,13 @@
+<html>
+<title>Belajar Flask</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<body>
+    <h1>Anda berada di halaman Index</h1>
+    {% if not search %}
+        <h2>Ini halaman index biasa</h2>
+    {% else %}
+        <h2>Ini halaman Search {{ search }}</h2>
+    {% endif %}
+    <a href="{{ url_for('login') }}">LOGIN</a>
+</body>
+</html>
